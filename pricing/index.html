@@ -1423,7 +1423,7 @@ C47.2,182.8,72.2,194.8,100,194.8z" /> </svg>
                                     <h4 class="title">Monthly subscription not for you?</h4>
                                     <p>We have a prepaid option that allows you to customize SMS campaigns at competitive rates with no monthly commitments.</p>
                                     <div class="box-slider">
-                                      <div id="slider-pricing" class="slider-inner ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min" style="width: 23.7%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 23.7%;"><div class="tooltip-slider">3823 SMS</div></span></div>
+                                      <div id="slider-pricing" class="slider-inner ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header ui-slider-range-min" style="width: 50%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"><div class="tooltip-slider">10,000 SMS</div></span></div>
                                     </div>
                                   </div>
                                 </div>
@@ -1431,7 +1431,7 @@ C47.2,182.8,72.2,194.8,100,194.8z" /> </svg>
                                   <div class="plan-price-slider-container">
                                     <div class="plan-price-slider-content">
                                       <h5>Price/SMS:</h5>
-                                      <p> <span class="payg-plan-price">1.9</span><span class="payg-currency"> cents/sms</span></p>
+                                      <p> <span class="payg-plan-price">0.05</span><span class="payg-currency"> cents/sms</span></p>
                                     </div> <a href="https://www.smsglobal.com/mxt-sign-up/" class="payg-btn button" data-event="subscription-item" data-subscription-item="PAYG Plan">Get Started</a></div>
                                 </div>
                               </div>
@@ -1783,14 +1783,14 @@ $(function() {
     function(e) {
       $("#slider-pricing").slider({
         range: "min",
-        value: 10000,
+        value: 10,000,
         min: 1,
         max: 14001,
         slide: function(e, a) {
-          $(this).find(".tooltip-slider").text(a.value + " SMS"), a.value <= 1300 ? ($(".payg-plan-price").text("6.0").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 1300 && a.value <= 3500 ? ($(".payg-plan-price").text("3.5").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 3500 && a.value <= 14e3 ? ($(".payg-plan-price").text("0.05").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 14e3 && ($(".payg-plan-price").text("Whosale Rates").addClass("payg"), $(".payg-currency").hide(), $(".payg-btn").text("Talk to an expert"))
+          $(this).find(".tooltip-slider").text(a.value + " SMS"), a.value <= 1300 ? ($(".payg-plan-price").text("6.0").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 1300 && a.value <= 3500 ? ($(".payg-plan-price").text("3.5").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 3500 && a.value <= 14e3 ? ($(".payg-plan-price").text("1.9").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 14e3 && ($(".payg-plan-price").text("Whosale Rates").addClass("payg"), $(".payg-currency").hide(), $(".payg-btn").text("Talk to an expert"))
         }
       }).find(".ui-slider-handle").append(e)
-    }($('<div class="tooltip-slider" />')), $(".tooltip-slider").text($("#slider-pricing").slider("value") + " SMS"), $(".payg-plan-price").text("1.9")
+    }($('<div class="tooltip-slider" />')), $(".tooltip-slider").text($("#slider-pricing").slider("value") + " SMS"), $(".payg-plan-price").text("0.05")
 });
 </script>
 <script type="text/javascript">
