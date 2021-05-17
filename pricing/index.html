@@ -1783,11 +1783,11 @@ $(function() {
     function(e) {
       $("#slider-pricing").slider({
         range: "min",
-        value: 3283,
+        value: 10000,
         min: 1,
         max: 14001,
         slide: function(e, a) {
-          $(this).find(".tooltip-slider").text(a.value + " SMS"), a.value <= 1300 ? ($(".payg-plan-price").text("6.0").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 1300 && a.value <= 3500 ? ($(".payg-plan-price").text("3.5").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 3500 && a.value <= 14e3 ? ($(".payg-plan-price").text("1.9").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 14e3 && ($(".payg-plan-price").text("Whosale Rates").addClass("payg"), $(".payg-currency").hide(), $(".payg-btn").text("Talk to an expert"))
+          $(this).find(".tooltip-slider").text(a.value + " SMS"), a.value <= 1300 ? ($(".payg-plan-price").text("6.0").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 1300 && a.value <= 3500 ? ($(".payg-plan-price").text("3.5").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 3500 && a.value <= 14e3 ? ($(".payg-plan-price").text("0.05").removeClass("payg"), $(".payg-currency").show(), $(".payg-btn").text("Get Started")) : a.value > 14e3 && ($(".payg-plan-price").text("Whosale Rates").addClass("payg"), $(".payg-currency").hide(), $(".payg-btn").text("Talk to an expert"))
         }
       }).find(".ui-slider-handle").append(e)
     }($('<div class="tooltip-slider" />')), $(".tooltip-slider").text($("#slider-pricing").slider("value") + " SMS"), $(".payg-plan-price").text("1.9")
